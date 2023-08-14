@@ -6,7 +6,7 @@ const Signup = () => {
     <>
       <div className="w-full h-screen  flex justify-center items-center bg-gray-200">
         <div className=" w-[30%] h-fit flex flex-col mx-auto justify-center items-center px-6 py-4 rounded-xl bg-white">
-          <h1 className="  font-bold text-xl py-2">Sign In</h1>
+          <h1 className="  font-bold text-xl py-2">Sign Up</h1>
           <div className=" w-full flex flex-col justify-center gap-5">
             <label htmlFor="email" className="flex flex-col gap-2">
               <span className="font-[400] text-gray-700">Email:</span>
