@@ -1,5 +1,5 @@
-import React, { useState, useNavigate } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import {app} from "../firebase"
 import { getAuth, createUserWithEmailAndPassword,updateProfile } from "firebase/auth";
 import { toast } from 'react-hot-toast';
@@ -8,7 +8,7 @@ const auth = getAuth(app);
 
 
 const Signup = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const initialValues = {
     name: "",
     email: "",
@@ -43,12 +43,13 @@ const Signup = () => {
         })
         console.log(user);
         toast.success("Signup Successfully!")
-        // navigate("/login")
+        navigate("/login")
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
-        setErrorMsg(err);
+        setErrorMsg(err.message);
         console.log("error ", err);
+        toast.error(err.message)
       });
     console.log(formdata);
   }
@@ -91,7 +92,7 @@ const Signup = () => {
                 className="px-2 py-1 border rounded-lg focus:outline-none focus:ring-1 bg-gray-100 focus:ring-slate-300 text-gray-500"
               />
             </label>
-            <p className="px-2 text-pink-600">{errorMsg}</p>
+            <p className="px-2 text-pink-600 text-center">{errorMsg}</p>
             <button
               onClick={handleSubmit}
               disabled={submitButtonDisabled}
