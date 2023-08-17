@@ -34,7 +34,7 @@ const Topbar = () => {
                 <li>
                   <div className="avatar">
                     <div className="w-10 rounded-full">
-                      <img src="https://static.fotor.com/app/features/img/aiface/advance/2.png" />
+                      <img src="https://static.fotor.com/app/features/img/aiface/advance/2.png" alt='avatar' />
                     </div>
                   </div>
                 </li>

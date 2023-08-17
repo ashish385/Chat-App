@@ -6,7 +6,7 @@ const Message = () => {
       <div className="chat chat-start pb-6 ">
         <div className="chat-image avatar">
           <div className="w-10 rounded-full">
-            <img src="https://static.fotor.com/app/features/img/aiface/advance/2.png" />
+            <img src="https://static.fotor.com/app/features/img/aiface/advance/2.png" alt='sender' />
           </div>
         </div>
         <div className="chat-header">
@@ -19,7 +19,7 @@ const Message = () => {
       <div className="chat chat-end">
         <div className="chat-image avatar">
           <div className="w-10 rounded-full">
-            <img src="https://imgv3.fotor.com/images/slider-image/A-blurry-image-of-a-woman-wearing-red.jpg" />
+            <img src="https://imgv3.fotor.com/images/slider-image/A-blurry-image-of-a-woman-wearing-red.jpg" alt='reciver' />
           </div>
         </div>
         <div className="chat-header">

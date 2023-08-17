@@ -1,9 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Topbar from '../components/Topbar';
 import LeftBar from '../components/LeftBar';
 import RightBar from '../components/RightBar';
-import Dummy from '../components/Dummy';
 
 const LandingPage = () => {
   return (
@@ -22,7 +20,6 @@ const LandingPage = () => {
           </div>
           <div className="  w-[60%] ">
             <RightBar />
-            {/* <Dummy /> */}
           </div>
         </div>
       </div>
