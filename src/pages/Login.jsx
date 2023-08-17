@@ -18,7 +18,7 @@ const Login = () => {
 
   const [formdata, setFormdata] = useState(initialValues);
   const [errorMsg, setErrorMsg] = useState(false);
-   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+   
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -39,7 +39,7 @@ const Login = () => {
         
         console.log(res);
         toast.success("Login Successfully!")
-        navigate("/")
+        navigate("/dashboard")
       })
       .catch((err) => {
 

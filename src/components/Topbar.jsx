@@ -1,62 +1,65 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Sidebar from './Sidebar';
 
 const Topbar = () => {
   return (
     <>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900 sticky" >
-        <div className="max-w-screen-xl flex  items-center justify-between mx-auto p-4">
-          {/* <Link to="/" className="flex items-center">
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8 mr-3"
-              alt="Flowbite Logo"
-            />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Char-App
-            </span>
-          </Link> */}
-
-          <div className="flex items-center ">
-            <button
-              data-collapse-toggle="navbar-user"
-              type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg  hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-user"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M1 1h15M1 7h15M1 13h15"
-                />
-              </svg>
-            </button>
+      <div data-theme="aqua" className="drawer">
+        <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content flex flex-col">
+          {/* Navbar */}
+          <div className="w-full h-10 navbar bg-base-300">
+            <div className="flex-none lg:hidden">
+              <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  className="inline-block w-6 h-6 stroke-current"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </label>
+            </div>
+            <div className="flex-1 px-2 mx-2 text-lg">Chat App</div>
+            <div className="flex-none  lg:block">
+              <ul className="menu menu-horizontal ">
+                {/* Navbar menu content here */}
+                <li>
+                  <div className="avatar">
+                    <div className="w-10 rounded-full">
+                      <img src="https://static.fotor.com/app/features/img/aiface/advance/2.png" />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  
+                  <Link
+                    className="h-10  btn-outline btn-success mt-2 border "
+                    to={"/"}
+                  >
+                    Logout
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-          <button
-            type="button"
-            className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-            id="user-menu-button"
-          >
-            <span className="sr-only">Open user menu</span>
-            <img
-              className="w-8 h-8 rounded-full"
-              src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
-              alt="user photo"
-            />
-          </button>
+          {/* Page content here */}
         </div>
-      </nav>
+        <div className="drawer-side">
+          <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
+          <div className="menu p-4 w-80 h-full bg-base-200">
+            {/* Sidebar content here */}
+            <Sidebar />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
