@@ -39,7 +39,9 @@ const Login = () => {
         
         console.log(res);
         toast.success("Login Successfully!")
-        navigate("/dashboard")
+        window.localStorage.setItem("user", JSON.stringify(res.user));
+        navigate("/dashboard");
+
       })
       .catch((err) => {
 

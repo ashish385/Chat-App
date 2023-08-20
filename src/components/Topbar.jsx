@@ -2,10 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
+
 const Topbar = () => {
+  
+  
   return (
     <>
-      <div data-theme="aqua" className="drawer">
+      <div data-theme="aqua" className="drawer  ">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
           {/* Navbar */}
@@ -43,6 +46,7 @@ const Topbar = () => {
                   <Link
                     className="h-10  btn-outline btn-success mt-2 border "
                     to={"/"}
+                    onClick={(e) => localStorage.clear()}
                   >
                     Logout
                   </Link>

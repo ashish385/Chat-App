@@ -1,7 +1,8 @@
 import React from 'react'
 import Topbar from '../components/Topbar';
 import LeftBar from '../components/LeftBar';
-import RightBar from '../components/RightBar';
+import Chat from "../components/Chat"
+
 
 const LandingPage = () => {
   return (
@@ -19,7 +20,7 @@ const LandingPage = () => {
             <LeftBar />
           </div>
           <div className="  w-[60%] ">
-            <RightBar />
+            <Chat />
           </div>
         </div>
       </div>
